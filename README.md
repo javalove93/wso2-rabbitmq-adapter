@@ -19,4 +19,5 @@ How to install(deploy) to WSO2 CEP 3.1
   5. Add Input Event Adapter
   6. See rabbitmq at Event Adaptor Type listbox
 
+![menu](https://github.com/javalove93/wso2-rabbitmq-adapter/raw/master/Image.png)
 
