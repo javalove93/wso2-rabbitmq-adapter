@@ -1,15 +1,19 @@
-/* Copyright (C) 2015~ Hyundai Heavy Industries. All Rights Reserved.
- *
- * This software is the confidential and proprietary information of Hyundai Heavy Industries
- * You shall not disclose such Confidential Information and shall use it only 
- * in accordance with the terms of the license agreement
- * you entered into with Hyundai Heavy Industries.
- *
- * Revision History
- * Author			Date				Description
- * ---------------	----------------	------------
- * Sang-cheon Park	2015. 7. 17.		First Draft.
- */
+/*
+Copyright [2016] [Jerry Jeong]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
 package org.wso2.carbon.event.adaptor.rabbitmq.input;
 
 import static org.junit.Assert.assertTrue;
@@ -37,7 +41,7 @@ public class RabbitMQInputEventAdaptorTypeTest {
 	@AfterClass
 	public static void afterClass() {
 		try {
-			ConnectionFactory factory = EventAdapterHelper.getConnectionFactory("192.168.0.62", 5672, "admin", "admin", "/");
+			ConnectionFactory factory = EventAdapterHelper.getConnectionFactory("localhost", 5672, "admin", "admin", "/");
 			Connection connection = factory.newConnection();
 			Channel channel = connection.createChannel();
 			channel.queueDelete("wso2cep_test_input_queue");
